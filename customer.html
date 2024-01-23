@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script language=javascript>
+            function valid1()
+            {
+                var x;
+                x=event.keyCode;
+                if(x>=48 && x<=57)
+                event.keyCode=x;
+                else 
+                event.keyCode=0;
+            }
+
+            function valid2()
+            {
+                var x;
+                x=event.keyCode;
+                if((x>=65 && x<=90) || (x>=97 && x<=122))
+                event.keyCode=x;
+                else     
+                event.keyCode=0;    
+            }
+
+        </script>
+    </head>
+<body>
+<form name=frm method=post action=customer.php>
+    <center>
+    </br> 
+        <h2>CUSTOMER FORM</FORM></h2>
+        <caption><h2>CUSTOMER INFORMATION </h2></caption> </br> 
+      
+       Customer ID<input type=text name=ci onkeypress=valid1()></br>
+       Customer name<input type=text name=cn ></br>
+       Gender<input type=radio name=r value="Male" >Male
+                  <input type=radio name=r value="Female" >Female
+                 <input type=radio name=r value="Other" >Other</br>
+        Birthdate<input type=date name=bd onkeypress=valid1()></br>
+        contact Number<input type=text name=cno ></br>
+        email ID<input type=text name=em ></br>
+        adharcard<input type=text name=ano onkeypress=valid1()></br>
+        state<input type=text name=st onkeypress=valid1()></br>
+        city<input type=text name=ct onkeypress=valid1()></br>
+        pincode<input type=text name=pc onkeypress=valid1()></br>
+        address<input type=text name=ad onkeypress=valid1()></br>
+        <tr>
+            <td>Password</td>
+            <td><input type=password name=ps><br></td>
+        </tr>
+
+          
+    </br> 
+
+        <input type=submit name=sbm value=Submit>
+        <input type=submit name=sbm value=Update>  
+        <input type=submit name=sbm value=Delete> 
+        <input type=submit name=sbm value=Display>  
+        <input type=submit name=sbm value=Search>
+
+        <p style="margin-top:2%">
+            <b>Dhule and Nandurbar District Central Co-operative Bank Ltd. Dhule.</b>
+        </p>
+</center>
+</form>
+</body>
+</html>
