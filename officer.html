@@ -1,0 +1,73 @@
+<html>
+    <head>
+        
+        <script language=javascript>
+            function valid1()
+            {
+                var x;
+                x=event.keyCode;
+                if(x>=48 && x<=57)
+                {
+                event.keyCode=x;
+                return true;
+                }
+                else
+                { 
+                event.keyCode=0;
+                return false;
+                }
+            }
+
+            function valid2()
+            {
+                var x;
+                x=event.keyCode;
+                if((x>=65 && x<=90) || (x>=97 && x<=122)) 
+                {
+                event.keyCode=x;
+                return true;
+                }
+                else   
+                {  
+                event.keyCode=0;
+                return false;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name=frm method=post action=officer.php>
+    <center>  
+    </br> 
+        <h2>OFFICER FORM</h2>
+        <caption><h2>OFFICER INFORMATION </h2></caption> </br>     
+        Officer code<input type="number" name=oc onkeypress="return valid1()"></br>
+        Officer name<input type="text" name=on onkeypress="return valid2()"></br>
+        Gender<input type="radio" name=r value="Male">Male
+              <input type="radio" name=r value="Female">Female
+              <input type="radio" name=r value="Other">Other</br>
+        Contact Number <input type="number" name=cno maxlength="10" onkeypress="return valid1()"></br>
+        email ID<input type="text" name=em placeholder ="xyz@example.com"></br>
+        Address<input type="text" name=ad ></br>
+        Designation<input type="text" name="dg">
+        <tr>
+            <td>Password</td>
+            <td><input type=password name=ps><br></td>
+        </tr>
+
+           
+    </br>
+        <!--buttons-->
+        <input type=submit name=sbm value=Submit>
+        <input type=submit name=sbm value=Update>  
+        <input type=submit name=sbm value=Delete> 
+        <input type=submit name=sbm value=Display>  
+        <input type=submit name=sbm value=Search>
+        <p style="margin-top:2%">
+            <b>Dhule and Nandurbar District Central Co-operative Bank Ltd. Dhule.</b>
+        </p>
+</center>        
+</form>
+</body>
+</html>

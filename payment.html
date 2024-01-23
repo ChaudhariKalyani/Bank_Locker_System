@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>HTML FORM 1</title>
+        <script language=javascript>
+            function valid1()
+            {
+                var x;
+                x=event.keyCode;
+                if(x>=48 && x<=57)
+                event.keyCode=x;
+                else 
+                event.keyCode=0;
+            }
+
+            function valid2()
+            {
+                var x;
+                x=event.keyCode;
+                if((x>=65 && x<=90) || (x>=97 && x<=122))
+                event.keyCode=x;
+                else     
+                event.keyCode=0;    
+            }
+            
+           
+
+
+        </script>
+    </head>
+    <body>
+        <form name=frm method=post action=payment.php>
+    <center>  
+    </br> 
+        <h2>OPERATION FORM</FORM></h2>
+        <caption><h2>PAYMENT INFORMATION</h2></caption> </br>   
+        <tr>
+        <td>Locker Number</td>
+        <td><input type="text" name=no maxlength="10" onkeypress=valid1() ></br></td>
+        </tr>  
+        <tr>
+            <td>Rate</td>
+        <td><input type="text" name=ra maxlength="10" onkeypress=valid1() ></br></td>
+        </tr>
+        Pay date<input type="date" name=pd ></br>
+        Amount<input type="text" name=am onkeypress=valid1() placeholder ="Number"></br>
+        Voucher Number<input type="text" name=vno maxlength="10" onkeypress=valid1() placeholder ="Number"></br>
+        CHDD Number<input type="text" name=cn onkeypress=valid1()></br>
+        CHDD Date<input type="date" name="cd" ></br>
+        Bank Name<input type="text" name=bn onkeypress=valid1()></br>
+    </br>
+        <!--buttons-->
+        <input type=submit name=sbm value=Submit>
+        <input type=submit name=sbm value=Update>  
+        <input type=submit name=sbm value=Delete> 
+        <input type=submit name=sbm value=Display>  
+        <input type=submit name=sbm value=Search> 
+    
+    
+        <p style="margin-top:2%">
+            <b>Dhule and Nandurbar District Central Co-operative Bank Ltd. Dhule.</b>
+        </p>
+</center>        
+</form>
+</body>
+
+</html>
